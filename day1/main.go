@@ -8,18 +8,18 @@ import (
 	"strconv"
 )
 
-type Diretion int
+type Direction int
 
 const (
-	Left  Diretion = -1
-	Right Diretion = 1
+	Left  Direction = -1
+	Right Direction = 1
 )
 
 const LEFT = "L"
 const RIGHT = "R"
 
 type Rotation struct {
-	direction Diretion
+	direction Direction
 	positions int
 }
 
@@ -75,7 +75,7 @@ func main() {
 			panic(fmt.Sprintf("invalid rotation format at line %d", lineNumber))
 		}
 
-		var direction Diretion
+		var direction Direction
 		switch matchResult[1] {
 		case LEFT:
 			direction = Left
